@@ -6,10 +6,24 @@ PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
     <definition name="public" template="/WEB-INF/views/layouts/public.jsp">
     	<put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
     	<put-attribute name="navigator" value="/WEB-INF/views/common/navigator.jsp"/>
+    	<put-attribute name="jumbotron" value="/WEB-INF/views/main/jumbotron.jsp"/>
     	<put-attribute name="content" value=""/>
     	<put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp"/>
     </definition>
+    
     <definition name="*/*.tiles" extends="public">
-    	<put-attribute name="content" value="/WEB-INF/views/{1}/{2}"/>
+    	<put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp"/>
     </definition>
+
+    <!-- no tiles -->
+    <definition name="noTiles" template="/WEB-INF/views/layouts/NoTemplate.jsp">
+    	<put-attribute name="noTemplate" value=""/>
+    </definition>
+    <definition name="*/*.jsp" extends="noTiles">
+        <put-attribute name="header" value="/WEB-INF/views/common/header.jsp"/>
+    	<put-attribute name="noTemplate" value="/WEB-INF/views/{1}/{2}.jsp"/>
+    	<put-attribute name="navigator" value="/WEB-INF/views/common/navigator.jsp"/>
+    </definition>
+    
+    
 </tiles-definitions>
