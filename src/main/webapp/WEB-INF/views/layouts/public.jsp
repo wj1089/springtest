@@ -10,7 +10,7 @@
 	<tiles:insertAttribute name="navigator"/>
 		<section>
 			<article>
-				<jsp:include page="../main/jumbotron.jsp/"></jsp:include>
+					<tiles:insertAttribute name="jumbotron"/>
 			</article>
 			<article>
 				<tiles:insertAttribute name="content"/>
