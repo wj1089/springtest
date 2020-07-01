@@ -18,17 +18,23 @@
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a id="a_login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
         <li><a id="a_join"><span class="glyphicon glyphicon-log-in"></span> Join</a></li>
-        
       </ul>
     </div>
   </div>
 </nav>
 <script>
-$('#a_join').click(function(e){
+$('#a_join').click(function(e) {
+	alert("들어왔어요~")
 	e.preventDefault()
-	alert('${context}/user/joinform')
-	location.href = `${context}/user/joinform`
+	alert(`${ctx}/user/home/join`)
+	location.href = `${ctx}/location/user/joinform`
+})
+$('#a_login').click(function(e) {
+	alert("로그인 들어왔어요~")
+	e.preventDefault()
+	alert(`${ctx}/user/home/login`)
+	location.href = `${ctx}/location/user/loginform`
 })
 </script>

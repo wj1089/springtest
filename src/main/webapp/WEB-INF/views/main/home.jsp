@@ -21,6 +21,7 @@
     </div>
   </div>
 </div><br>
+<!-- 외부에서　가져온것은　전부　ｓｒｃ로　적어준다． -->
 
 <div class="container-fluid bg-3 text-center">    
   <div class="row">
@@ -42,3 +43,9 @@
     </div>
   </div>
 </div><br><br>
+<script>
+app.init("${ctx}")
+
+</script>
+
+
