@@ -10,6 +10,7 @@ import com.test.web.domains.User;
 public interface UserMapper {
 	public void insertOneIntoPersons(User user);
 	public User selectOneFromPersons(User user);
+	public User selectByUseridAndPassword(User param);
 	public int existId(String userid);
 	public int countUsers();
 	public void createDB(HashMap<String, String> paramMap);

@@ -12,7 +12,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Component @Data
 public class User {
-		public String getName() {
+	
+	private String userid, password, name, birthday, gender, telephone,
+	regdate, accessCode;
+	
+	
+	/*public String getName() {
 		return name;
 	}
 
@@ -84,6 +89,6 @@ public class User {
 			return "User [userid=" + userid + ", password=" + password + ", name=" + name + ", birthday=" + birthday
 					+ ", gender=" + gender + ", telephone=" + telephone + ", regdate=" + regdate + ", accessCode="
 					+ accessCode + "]";
-		}
+		}*/
 
 }

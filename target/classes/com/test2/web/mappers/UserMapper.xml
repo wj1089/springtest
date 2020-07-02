@@ -2,8 +2,15 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <mapper namespace="com.test2.web.mappers.UserMapper">
+  <mapper namespace="com.test.web.mappers.UserMapper">
   <select  id="truncatePerson" parameterType="hashMap">
   	${TRUNCATE_PERSONS}
+  </select>
+  <select  id="createDB" parameterType="hashMap">
+  	${CREATE_DB}
+  </select>
+  <select  id="selectByUseridAndPassword" 
+ 		 resultType="com.test.web.domains.User"
+  		 parameterType="com.test.web.domains.User">
   </select>
 </mapper>

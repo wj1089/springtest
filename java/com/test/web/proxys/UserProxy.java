@@ -21,6 +21,7 @@ import com.test.web.mappers.UserMapper;
 public class UserProxy extends Proxy{
 	@Autowired TxMapper txMapper;
 	@Autowired Box<String> box;
+	@Autowired UserMapper userMapper;
 	
 	public String makeBirthday() {
 		// 1970 ~ 2010
